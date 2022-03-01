@@ -1,5 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const client = require("nekos.life");
+const { color } = require("../../config.json");
 
 module.exports = {
   name: "sumgif",
@@ -10,7 +11,7 @@ module.exports = {
       const embed = new MessageEmbed()
         .setTitle("Neko")
         .setImage(neko.url)
-        .setColor("RANDOM");
+        .setColor(color);
       msg.channel.send({ embeds: [embed] });
     });
   },
